@@ -5,12 +5,9 @@ const AnswerOptions = ({ question, isChecked, handleAnswerChange, handleCheckbox
 	if (!question) {
 		return (<>
 			<div className="text-danger">
-				No questions available, <br /> you may try agian by reducing your requested number of
+				No questions available, <br /> you may try again by changing your requested number of
 				questions on this topic
 			</div>
-			<button type="button" className="btn btn-light">
-			<Link to={"/"}>Back to Home</Link>
-			</button>
 </>
 		)
 	}

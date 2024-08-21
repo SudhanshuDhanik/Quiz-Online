@@ -1,5 +1,5 @@
 import React from "react"
-import { useLocation} from "react-router-dom"
+import {Link, useLocation} from "react-router-dom"
 
  const QuizResult = () => {
 		const location = useLocation()
@@ -7,19 +7,19 @@ import { useLocation} from "react-router-dom"
 		const numQuestions = quizQuestions.length
 		const percentage = Math.round((totalScores / numQuestions) * 100)
 
-		
-
 		return (
 			<section className="container mt-5">
-				<h3 className="text-primary">Your Quiz Result Summary</h3>
-				<hr />
+				<h3 className="text-primary"> Your Quiz Result Summary
+				<hr className="text-primary" /></h3>
 				<h5 className="text-info">
 					You answered {totalScores} out of {numQuestions} questions correctly.
-				</h5>
+					<br />
 				<p>Your total score is {percentage}%.</p>
+				</h5>
 				<button type="button" className="btn btn-light">
-			<Link to={"/"}>Back to Home</Link>
+			<Link to={"/admin"}>Back to Home</Link>
 			</button>
+				
 			</section>
 		)
  }
