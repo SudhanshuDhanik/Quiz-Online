@@ -17,7 +17,7 @@ import {Link, useLocation} from "react-router-dom"
 				<p>Your total score is {percentage}%.</p>
 				</h5>
 				<button type="button" className="btn btn-light">
-			<Link to={"/admin"}>Back to Home</Link>
+			<Link to={"/"}>Back to Home</Link>
 			</button>
 				
 			</section>
