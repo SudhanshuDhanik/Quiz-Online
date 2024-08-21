@@ -7,9 +7,7 @@ import { useLocation} from "react-router-dom"
 		const numQuestions = quizQuestions.length
 		const percentage = Math.round((totalScores / numQuestions) * 100)
 
-		const handleRetakeQuiz = () => {
-			alert("Oops! this functionality was not implemented!!!")
-		}
+		
 
 		return (
 			<section className="container mt-5">
@@ -19,10 +17,9 @@ import { useLocation} from "react-router-dom"
 					You answered {totalScores} out of {numQuestions} questions correctly.
 				</h5>
 				<p>Your total score is {percentage}%.</p>
-
-				<button className="btn btn-primary btn-sm" onClick={handleRetakeQuiz}>
-					Retake this quiz
-				</button>
+				<button type="button" className="btn btn-light">
+			<Link to={"/"}>Back to Home</Link>
+			</button>
 			</section>
 		)
  }
