@@ -8,6 +8,10 @@ const AnswerOptions = ({ question, isChecked, handleAnswerChange, handleCheckbox
 				No questions available, <br /> you may try again by changing your requested number of
 				questions on this topic
 			</div>
+			<br />
+			<button type="button" className="btn btn-light">
+			<Link to={"/"}>Back to Home</Link>
+			</button>
 </>
 		)
 	}
