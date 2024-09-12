@@ -28,7 +28,7 @@ body {
   place-items: center;
   min-height: 100vh;
   min-width: 400px;
-  background-image: url(https://cdn.vectorstock.com/i/500p/99/19/neon-quiz-sign-glow-question-mark-and-lighting-vector-30239919.avif);
+  background-image: url('./images/giphycopy.gif');
   background-position: center;
   background-attachment: fixed;
   background-size: cover;

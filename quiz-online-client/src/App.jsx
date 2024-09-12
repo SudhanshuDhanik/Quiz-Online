@@ -11,11 +11,13 @@ import UpdateQuestion from "./components/question/UpdateQuestion"
 import Navbar from "./components/layout/Navbar"
 import Admin from "./components/Admin"
 import "./App.css"
+import JarvisAssistant from "./components/JarvisAssistant"
 
 function App() {
 	return (
 		<main >
 			<Router>
+				<JarvisAssistant></JarvisAssistant>
 				<Navbar />
 				<Routes>
 					<Route path="/" element={<Home />} />

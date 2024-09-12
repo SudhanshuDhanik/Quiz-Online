@@ -51,12 +51,12 @@ import { getSubjects } from "../../../utils/QuizService"
 				case 1:
 					return (
 						<div>
-							<h3 className="text-info mb-2">I want to take a quiz on :</h3>
+							<h3 className="text-info mb-2">I want to test the quiz on :</h3>
 							<select
 								className="form-select"
 								value={selectedSubject}
 								onChange={handleSubjectChange}>
-								<option value="">Select a subject</option>
+								<option value="">Select the category</option>
 								{subjects.map((subject) => (
 									<option key={subject} value={subject}>
 										{subject}
@@ -82,7 +82,7 @@ import { getSubjects } from "../../../utils/QuizService"
 					return (
 						<div>
 							<h2>Confirmation</h2>
-							<p>Subject: {selectedSubject}</p>
+							<p>Category {selectedSubject}</p>
 							<p>Number of Questions: {selectedNumQuestions}</p>
 						</div>
 					)
@@ -109,7 +109,7 @@ import { getSubjects } from "../../../utils/QuizService"
 		return (
 			<section className="mt-5">
 				<h3  className="mb-4 text-warning">
-					Welcome to Quiz
+					Welcome to Test Quiz
 				</h3>
 				{renderProgressBar()}
 				<div className="card">

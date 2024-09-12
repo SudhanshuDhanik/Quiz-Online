@@ -1,0 +1,34 @@
+/* Example CSS (from your existing style.css) */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-container {
+    text-align: center;
+  }
+  
+  .image img {
+    width: 200px;
+    height: auto;
+  }
+  
+  .input {
+    margin-top: 20px;
+  }
+  
+  .talk {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .content {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  

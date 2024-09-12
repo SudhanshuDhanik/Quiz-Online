@@ -5,8 +5,8 @@ const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg bg-body-tertiary px-5 shadow sticky-top">
 			<div className="container-fluid">
-				<NavLink className="navbar-brand" to={"/"}>
-					Online Quiz App
+				<NavLink className="navbar-brand text-primary" to={"/"}>
+					Welcome to Hydro Heroes
 				</NavLink>
 				<button
 					className="navbar-toggler"
@@ -28,7 +28,7 @@ const Navbar = () => {
 
 						<li className="nav-item">
 							<NavLink className="nav-link" to={"/quiz-stepper"}>
-								Take Quiz
+								Test Quiz
 							</NavLink>
 						</li>
 					</ul>

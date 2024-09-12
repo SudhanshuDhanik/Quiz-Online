@@ -52,7 +52,7 @@ const AddQuestion = () => {
 	const handleRemoveCorrectAnswer = (index) => {
 		setCorrectAnswers(correctAnswers.filter((answer, i) => i !== index))
 	}
-
+	const [imageUrl, setImageUrl] = useState('');
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 		try {
@@ -101,14 +101,14 @@ const AddQuestion = () => {
 							<form onSubmit={handleSubmit} className="p-2">
 								<div className="mb-3">
 									<label htmlFor="subject" className="form-label text-info">
-										Select a Subject
+										Select a Category
 									</label>
 									<select
 										id="subject"
 										value={subject}
 										onChange={(e) => setSubject(e.target.value)}
 										className="form-control">
-										<option value="">Select subject</option>
+										<option value="">Select category</option>
 										<option value={"New"}>Add New</option>
 										{subjectOptions.map((option) => (
 											<option key={option} value={option}>
@@ -121,7 +121,7 @@ const AddQuestion = () => {
 								{subject === "New" && (
 									<div className="mb-3">
 										<label htmlFor="new-subject" className="form-label text-info">
-											Add New Subject
+											Add New Category
 										</label>
 										<input
 											type="text"
@@ -134,7 +134,7 @@ const AddQuestion = () => {
 											type="button"
 											onClick={handleAddSubject}
 											className="btn btn-outline-primary mt-2">
-											Add Subject
+											Add Category
 										</button>
 									</div>
 								)}
@@ -152,6 +152,7 @@ const AddQuestion = () => {
 									<label htmlFor="question-type" className="form-label text-info">
 										Question type
 									</label>
+
 									<select
 										id="question-type"
 										value={questionType}
@@ -160,6 +161,26 @@ const AddQuestion = () => {
 										<option value="single">Single Answer</option>
 										<option value="multiple">Multiple Answer</option>
 									</select>
+									<div className="container mt-5">
+      <h2 className="mb-4">Insert Image URL</h2>
+     
+      <input
+        type="text"
+        className="form-control mb-3"
+        placeholder="Enter image URL" 
+        value={imageUrl}
+        onChange={(e) => setImageUrl(e.target.value)} // Update state on input change
+      />
+
+      
+      {imageUrl && (
+        <img
+          src={imageUrl}
+          alt="User Provided"
+          className="img-fluid rounded"
+        />
+      )}
+    </div>
 								</div>
 								<div className="mb-3">
 									<label htmlFor="choices" className="form-label text-primary">
