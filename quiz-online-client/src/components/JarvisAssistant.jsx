@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "./style.css";
+import "./JarvisAssistant.css";
 import giphy from '../assets/giphy.gif';
 
 
@@ -10,8 +10,8 @@ const JarvisAssistant = () => {
   useEffect(() => {
     const speak = (text) => {
       const textSpeak = new SpeechSynthesisUtterance(text);
-      textSpeak.rate = 1;
-      textSpeak.volume = 1;
+      textSpeak.rate = 1.5;
+      textSpeak.volume = 10;
       textSpeak.pitch = 1;
       window.speechSynthesis.speak(textSpeak);
     };
@@ -82,6 +82,7 @@ const JarvisAssistant = () => {
 
     speak("Initializing JARVIS...");
     wishMe();
+    speak("oYE MOHIT FUCK YOU");
 
     return () => {
       btn.removeEventListener("click", handleButtonClick);
