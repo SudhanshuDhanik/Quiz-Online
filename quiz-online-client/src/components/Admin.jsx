@@ -1,19 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
-const Admin = () => {
+import './Admin.css';
+	function Admin() {
 	return (
-		<section className="container">
-			<h2 className="mt-5 text-light">Welcome to admin home page</h2>
+		<section className=" admin-page">
+			<h2 className="admin-heading">Welcome to admin home page</h2>
 			<hr />
-			<nav className="nav flex-column">
-				<Link to={"/create-quiz"} className="nav-link; bg-info">
-					Create a New Quiz
+			<div className="page-heading">
+				<Link to={"/create-quiz"} >
+			<h4>Create a New Quiz</h4>	
 				</Link>
-				<Link to={"/all-quizzes"} className="nav-link bg-warning">
-					Manage existing Quizes
+				<Link to={"/all-quizzes"} >
+            <h4 >Manage your quizzes here!</h4>
 				</Link>
-			</nav>
+			</div>
 		</section>
 	)
 }

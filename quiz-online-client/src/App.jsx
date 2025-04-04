@@ -23,29 +23,31 @@ function App() {
   return (
     <main>
       <Router>
-        {/* Button to toggle JarvisAssistant */}
-        <button onClick={handleToggleJarvis} className="btn btn-primary toggle-jarvis-btn">
-          {isJarvisActive ? "Hide Assistant" : "Show Assistant"}
-        </button>
+        {/* ✅ Only Navbar Button Controls Jarvis */}
+        <Navbar toggleJarvis={handleToggleJarvis} isJarvisActive={isJarvisActive} />
         
-        {/* JarvisAssistant component - only shown when isJarvisActive is true */}
+        {/* ✅ Render JarvisAssistant Only When Active */}
         {isJarvisActive && (
           <div className="jarvis-assistant-container">
             <JarvisAssistant />
           </div>
         )}
-        
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/quiz-stepper" element={<QuizStepper />} />
-          <Route path="/take-quiz" element={<Quiz />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/create-quiz" element={<AddQuestion />} />
-          <Route path="/update-quiz/:id" element={<UpdateQuestion />} />
-          <Route path="/all-quizzes" element={<GetAllQuiz />} />
-          <Route path="/quiz-result" element={<QuizResult />} />
-        </Routes>
+
+        <div className="quiz-container">
+          <div className="overlay"></div>
+          <div className="content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/quiz-stepper" element={<QuizStepper />} />
+              <Route path="/take-quiz" element={<Quiz />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/create-quiz" element={<AddQuestion />} />
+              <Route path="/update-quiz/:id" element={<UpdateQuestion />} />
+              <Route path="/all-quizzes" element={<GetAllQuiz />} />
+              <Route path="/quiz-result" element={<QuizResult />} />
+            </Routes>
+          </div>
+        </div>
       </Router>
     </main>
   );

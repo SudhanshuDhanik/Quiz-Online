@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import JarvisAssistant from "./JarvisAssistant";
-
+import './Home.css'
 const Home = () => {
 
 
   return (
     <main>
-   <h2 className="mt-5 text-warning">Welcome Admin, you can test the quiz</h2>
+ <h1 style={{ color: '#ffba08' }}>Welcome to the Quiz App</h1>
+ <p style={{ color: '#f0f0f0' }}>Get started with your quiz!</p>
     </main>
   );
+ 
+
 };
 
 export default Home;

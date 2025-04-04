@@ -125,12 +125,12 @@ const handleSubmit = () => {
 	}
 
 	return (
-		<div className="p-5">
+		<div className="p-5 text-light fw-bold text-shadow">
 			<h3 className="text-info">
 				Question {quizQuestions.length > 0 ? currentQuestionIndex + 1 : 0} of {quizQuestions.length}
 			</h3>
 
-			<h4 className="mb-4 text-warning">
+			<h4 className="mb-4 text-warning fw-bold text-shadow">
 				<pre>{quizQuestions[currentQuestionIndex]?.question}</pre>
 			</h4>
 

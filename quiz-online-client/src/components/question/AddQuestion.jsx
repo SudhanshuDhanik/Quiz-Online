@@ -121,7 +121,7 @@ const AddQuestion = () => {
 								{subject === "New" && (
 									<div className="mb-3">
 										<label htmlFor="new-subject" className="form-label text-info">
-											Add New Category
+											Add New Subject
 										</label>
 										<input
 											type="text"
@@ -134,7 +134,7 @@ const AddQuestion = () => {
 											type="button"
 											onClick={handleAddSubject}
 											className="btn btn-outline-primary mt-2">
-											Add Category
+											Add Subject
 										</button>
 									</div>
 								)}
@@ -161,26 +161,7 @@ const AddQuestion = () => {
 										<option value="single">Single Answer</option>
 										<option value="multiple">Multiple Answer</option>
 									</select>
-									<div className="container mt-5">
-      <h2 className="mb-4">Insert Image URL</h2>
-     
-      <input
-        type="text"
-        className="form-control mb-3"
-        placeholder="Enter image URL" 
-        value={imageUrl}
-        onChange={(e) => setImageUrl(e.target.value)} // Update state on input change
-      />
-
-      
-      {imageUrl && (
-        <img
-          src={imageUrl}
-          alt="User Provided"
-          className="img-fluid rounded"
-        />
-      )}
-    </div>
+									
 								</div>
 								<div className="mb-3">
 									<label htmlFor="choices" className="form-label text-primary">

@@ -1,41 +1,47 @@
-import React from "react"
-import { NavLink } from "react-router-dom"
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "./Navbar.css";
 
-const Navbar = () => {
-	return (
-		<nav className="navbar navbar-expand-lg bg-body-tertiary px-5 shadow sticky-top">
-			<div className="container-fluid">
-				<NavLink className="navbar-brand text-primary" to={"/"}>
-					Welcome to Hydro Heroes
-				</NavLink>
-				<button
-					className="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarNav"
-					aria-controls="navbarNav"
-					aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span className="navbar-toggler-icon"></span>
-				</button>
-				<div className="collapse navbar-collapse" id="navbarNav">
-					<ul className="navbar-nav ml-auto">
-						<li className="nav-item">
-							<NavLink className="nav-link" to={"/admin"}>
-								Admin
-							</NavLink>
-						</li>
+const Navbar = ({ toggleJarvis, isJarvisActive }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-						<li className="nav-item">
-							<NavLink className="nav-link" to={"/quiz-stepper"}>
-								Test Quiz
-							</NavLink>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	)
-}
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
 
-export default Navbar
+  return (
+    <nav className={`navbar ${isOpen ? "open" : ""}`}>
+      <div className="container">
+        <NavLink className="navbar-brand" to={"/"}>
+          🚀 Quiz App
+        </NavLink>
+
+        {/* Hamburger Menu */}
+        <div className="hamburger" onClick={handleToggle}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div className="navbar-links">
+          <NavLink className="nav-link" to={"/admin"} onClick={handleToggle}>
+            Admin
+          </NavLink>
+          <NavLink className="nav-link" to={"/quiz-stepper"} onClick={handleToggle}>
+            Take Quiz
+          </NavLink>
+        </div>
+
+        {/* Jarvis Assistant Button */}
+        <button 
+          className={`nav-button ${isJarvisActive ? 'active' : ''}`} 
+          onClick={toggleJarvis}
+        >
+          {isJarvisActive ? "Hide Assistant" : "Show Assistant"}
+        </button>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

@@ -8,7 +8,7 @@ import {Link, useLocation} from "react-router-dom"
 		const percentage = Math.round((totalScores / numQuestions) * 100)
 
 		return (
-			<section className="container mt-5">
+			<section className="mt-5">
 				<h3 className="text-primary"> Your Quiz Result Summary
 				<hr className="text-primary" /></h3>
 				<h5 className="text-info">

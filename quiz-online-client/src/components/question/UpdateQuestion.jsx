@@ -66,7 +66,7 @@ const UpdateQuestion = () => {
 	}
 
 	return (
-		<div className="container bg-info">
+		<div className=" bg-info">
 			<h4 className="mt-5 text-warning" >
 				Update Quiz Question
 			</h4>
